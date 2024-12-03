@@ -1533,9 +1533,9 @@ server {
   # ALPN value h2) or 81 (HTTP 1.0 or HTTP 1.1, ALPN value http/1.1 or no value)
 
   listen 127.0.0.1:82 http2 proxy_protocol;
-  listen [::1]:82 http2;
+  
   listen 127.0.0.1:81 proxy_protocol;
-  listen [::1]:81;
+  
   server_name $HOST;
 
   # nginx does not know its external port/protocol behind haproxy, so use relative redirects.
